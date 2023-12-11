@@ -336,8 +336,6 @@ final class JsDelivrEsmResolver implements PackageResolverInterface
             return self::URL_PATTERN_DIST_CSS;
         }
 
-        $pattern = str_ends_with($filePath, '.css') ? self::URL_PATTERN_DIST_CSS : self::URL_PATTERN_DIST;
-
-        return $pattern;
+        return str_ends_with($filePath, '.css') ? self::URL_PATTERN_DIST_CSS : self::URL_PATTERN_DIST;
     }
 }
