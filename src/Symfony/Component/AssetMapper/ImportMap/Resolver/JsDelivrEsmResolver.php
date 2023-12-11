@@ -330,7 +330,7 @@ final class JsDelivrEsmResolver implements PackageResolverInterface
         return preg_replace('{/\*# sourceMappingURL=[^ ]*+ \*/}', '', $content);
     }
 
-    private function resolveUrlPattern(string $filePath, string $packageName): string
+    private function resolveUrlPattern(string $packageName, string $filePath): string
     {
         if (in_array($packageName, self::DIST_NO_ESM_LOADING, true)) {
             return self::URL_PATTERN_DIST_CSS;
